@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-const projectData = {};
+let projectData = {};
 
 const recentEntries = [];
 // Require Express to run server and routes
@@ -31,13 +31,14 @@ const server = app.listen(port, () => console.log(`listening on port ${port}`));
 
 app.post( '/addEntry', function(req,res){
 
-    let convertTemp =  (req.body.temperature - 273.15) * 9/5 + 32;
 
   let newEntry = {
-    temperature:  convertTemp.toPrecision(4),
+    temperature:  req.body.temperature,
     currentDate: req.body.newDate,
     content: req.body.userfeelings,
   }
+
+  projectData=newEntry;
   console.log(newEntry);
 
   recentEntries.push(newEntry);
@@ -45,9 +46,17 @@ app.post( '/addEntry', function(req,res){
 })
 
 
+
+//setup old entries get route
+
+app.get('/getOldEntries', function(req,res){
+
+  res.send(recentEntries);
+  })
+
 //setup get route
 
 app.get('/all', function(req,res){
 
-  res.send(recentEntries);
+  res.send(projectData);
 })

@@ -1,15 +1,15 @@
 /* Global Variables */
 
-// const { json } = require("body-parser");
 
 const baseURL= 'http://api.openweathermap.org/data/2.5/weather?zip=';
 const apiKey = ',us&appid=408281d3f29e387234edd3843c3b0e04';
 
-// Create a new date instance dynamically with JS
+// select every entry possible
 
 const entryHistory = document.querySelector('#entryHolder');
 
 
+// Create a new entry instance dynamically with JS after clicking button
 document.getElementById('generate').addEventListener('click',performAction );
 
 
@@ -28,7 +28,8 @@ function performAction(e){
         }
     )
 }
-//create get function
+
+//create get function for weather api
 
 const getData = async (baseURL,zip, key) =>{
 
@@ -44,7 +45,7 @@ const getData = async (baseURL,zip, key) =>{
 };
 
 
-//create post function
+//create post function for  weather api get to add to server
 
 const postData = async (url='', data = {}) => {
 
@@ -67,6 +68,7 @@ const postData = async (url='', data = {}) => {
 };
 
 
+//create function to call server data and updateUI
 const updateUI = async () => {
     
     const response = await fetch('/all')
@@ -88,6 +90,7 @@ const updateUI = async () => {
 }
 
 
+//create function that populates Ui with all previous entries
 const oldEntries = async () =>{
 
     const response = await fetch('/all')

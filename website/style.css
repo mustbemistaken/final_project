@@ -6,13 +6,15 @@ body{
 
 html{
     width: 100vw;
+    background: white;
+    
 }
 #app{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns: auto; */
-    width: 100vw;
-    background: #444;
+    /* width: 100vw; */
+    background: white;
     color: #f0d43a;
     align-items: center;
     grid-gap: 1em;
@@ -25,9 +27,6 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    width:100vw;
-  
 
 }
 
@@ -63,20 +62,17 @@ html{
 #date{
 
     font-size: small;
-    width: 100%;
 }
 
 #temp{
 
     font-size: small;
-    width: 100%;
 }
 
 #content{
 
     font-size: large;
     word-wrap: break-word;
-    width: 100%;
 }
 
 .headline {
@@ -100,7 +96,7 @@ input{
     display:block;
     height: 60px;
     width: 320px;
-    background:red;
+    background: blue;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
@@ -110,7 +106,7 @@ input{
 button{
     width: 300px;
     height: 100px;
-    background: #3b4a6b;
+    background: #2a2d33;
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
@@ -122,7 +118,7 @@ h1{
 }
 
 textarea{
-    background:red;
+    background: blue;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;

@@ -45,6 +45,8 @@ app.post( '/addEntry', function(req,res){
 })
 
 
+//setup get route
+
 app.get('/all', function(req,res){
 
   res.send(recentEntries);

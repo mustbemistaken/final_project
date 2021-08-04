@@ -1,7 +1,10 @@
 import  { geoData }  from "./Geo.js";
 
 // Create a new entry instance dynamically with JS after clicking button
-document.getElementById('generate').addEventListener('click',performAction);
+
+window.onload=function(){
+    document.getElementById('generate').addEventListener('click',performAction);
+  }
 
 async function performAction(e){
 

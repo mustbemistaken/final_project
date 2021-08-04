@@ -7,7 +7,7 @@ Install the necessary packages:
 
 Check package.json dependencies for a full list
 
-### Step 1: Enter text/URL
+### Step 1: Enter location and Date of departure
 
 To interact with the webpage, enter your desired travel location and enter the date of departure. 
 

@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Weather Journal</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;700&display=swap" rel="stylesheet"><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><div id="app"><header class="outer head"><h3>My Travel App</h3></header><section class="outer cont1"><div><label for="formdata"><b>Where are we going?</b></label> <textarea class="myInput" id="formdata" placeholder="Enter your destination" rows="1" cols="50" maxlength="50"></textarea> <label for="start"><b>Departure:</b></label> <input type="date" id="start" name="trip-start" min="2021-01-01" max="2022-12-31"> <button id="generate" type="submit"><b>Take-off!</b></button></div></section><section class="outer cont2"><div id="pix"></div></section><section class="outer cont3"><div id="travelData"></div></section><footer class="outer foot"><p>Made by KG airlines</p></footer></div><script>// Check that service workers are supported
+  if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+      });
+  }</script></body></html>

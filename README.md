@@ -1,4 +1,25 @@
-# Weather-Journal App Project
+# Project Instructions
 
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. The project first calls upon weatherapi to get json data based on the zipcode input of the user. It is then sent in a post route with the users feelings along with the zipcode entered. We then finally call our UI update function which uses all the data to create new entries with information from the user and openweather api.
+This project takes user location data and date of departure to retrieve information on their flight itinerary. Information includes, days until travel weather, temp, and tidbits on the destination
+
+## Getting started
+Install the necessary packages:
+
+Check package.json dependencies for a full list
+
+### Step 1: Enter text/URL
+
+To interact with the webpage, enter your desired travel location and enter the date of departure. 
+
+### Step 2: Scripts
+
+   "test": "jest",
+    "start": "node src/server/index.js",
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack serve --config webpack.dev.js --open "
+
+-test: Runs jest unit tests against JS functions found in the client folder
+-start: Starts server that listens on localhost:8081
+-build-prod: Builds the project in production mode. This includes express server and service workers that keep the website active in the event of the server going offline
+-build-dev: Builds the project in development mode. This dev server is setup to only server static files through dist
+
